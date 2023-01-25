@@ -6,8 +6,8 @@ if "VIRTUAL_ENV" in os.environ:
     HOME_DIR = Path(os.environ["VIRTUAL_ENV"])
 else:
     HOME_DIR = Path.home()
-SOLC_SELECT_DIR = os.path.join("tmp", "solc-select")
-ARTIFACTS_DIR = os.path.join("tmp", "solc-select-artifacts")
+SOLC_SELECT_DIR = os.path.join(os.getcwd(), "tmp", "solc-select")
+ARTIFACTS_DIR = os.path.join(SOLC_SELECT_DIR, "artifacts")
 
 # CLI Flags
 INSTALL_VERSIONS = "INSTALL_VERSIONS"
